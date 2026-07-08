@@ -1,0 +1,23 @@
+/* Charging Ecosystem dashboard */
+
+/* -- CHARGING DASHBOARD -- */
+.charge-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+@media (max-width:900px){.charge-grid{grid-template-columns:1fr;}}
+.dash-card{border:1px solid var(--line);border-radius:16px;padding:32px;background:var(--surface);}
+.ring-wrap{display:flex;align-items:center;gap:24px;}
+.ring{position:relative;width:140px;height:140px;flex-shrink:0;}
+.ring svg{transform:rotate(-90deg);}
+.ring circle{fill:none;stroke-width:8;}
+.ring .track{stroke:var(--surface-2);}
+.ring .prog{stroke:var(--accent);stroke-linecap:round;transition:stroke-dashoffset 1.2s var(--ease);}
+.ring-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--mono);}
+.ring-label .pct{font-size:26px;}
+.ring-label .sub{font-size:10px;color:var(--text-faint);}
+.dash-stats{display:flex;flex-direction:column;gap:10px;}
+.dash-stats .row{display:flex;justify-content:space-between;font-size:13px;color:var(--text-dim);border-bottom:1px dashed var(--line);padding-bottom:8px;}
+.dash-stats .row b{color:var(--text);font-family:var(--mono);font-weight:500;}
+.curve-svg{width:100%;height:150px;margin-top:10px;}
+.curve-svg path.curve{fill:none;stroke:var(--accent-2);stroke-width:2;}
+.charge-timeline{display:flex;gap:2px;margin-top:20px;}
+.charge-timeline .seg-block{flex:1;height:28px;background:var(--surface-2);position:relative;border-radius:2px;overflow:hidden;}
+.charge-timeline .seg-block .f{position:absolute;inset:0;width:0;background:var(--accent);opacity:.5;}

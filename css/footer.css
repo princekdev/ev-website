@@ -1,0 +1,27 @@
+/* Footer + scroll progress + utility classes */
+
+/* -- FOOTER -- */
+footer{padding:80px 0 30px;border-top:1px solid var(--line);position:relative;}
+.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:60px;}
+.foot-cols{display:flex;gap:64px;flex-wrap:wrap;}
+.foot-col h5{font-family:var(--mono);font-size:11px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;}
+.foot-col a{display:block;font-size:14px;color:var(--text-dim);margin-bottom:10px;transition:color .2s,transform .2s;}
+.foot-col a:hover{color:var(--accent);transform:translateX(3px);}
+.foot-form{display:flex;gap:8px;margin-top:16px;max-width:340px;}
+.foot-form input{flex:1;background:var(--surface);border:1px solid var(--line-strong);border-radius:8px;padding:11px 14px;color:var(--text);font-size:13px;}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--text-faint);}
+.back-top{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;transition:border-color .3s,transform .3s;}
+.back-top:hover{border-color:var(--accent);transform:translateY(-4px);}
+
+/* scroll progress */
+.scroll-progress{position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:200;box-shadow:0 0 8px rgba(var(--accent-rgb),.6);width:0%;}
+
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+
+/* Grid items default to min-width:auto, which lets intrinsic content width
+   (long labels, sliders, mono numbers) push past the track and overflow the
+   viewport on narrow screens. Reset every grid's direct children so they can
+   shrink below their content size. */
+.calc-wrap > *, .metric-grid > *, .charge-grid > *, .gauge-grid > *,
+.locator-wrap > *, .cost-wrap > *, .cost-results > *, .studio > *,
+.sus-grid > *, .tl-row > *{ min-width:0; }

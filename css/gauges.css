@@ -1,0 +1,12 @@
+/* Performance gauges */
+
+/* -- GAUGES -- */
+.gauge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media (max-width:900px){.gauge-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.gauge-grid{grid-template-columns:1fr 1fr;}}
+.gauge-card{border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center;background:var(--surface);}
+.gauge-card svg{width:120px;height:120px;}
+.gauge-card .g-track{fill:none;stroke:var(--surface-2);stroke-width:8;}
+.gauge-card .g-val{fill:none;stroke:var(--accent);stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset 1.4s var(--ease);}
+.gauge-card .g-num{font-family:var(--mono);font-size:20px;}
+.gauge-card .g-label{font-size:12px;color:var(--text-dim);margin-top:10px;text-transform:uppercase;letter-spacing:.06em;}

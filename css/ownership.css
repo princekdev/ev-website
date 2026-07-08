@@ -1,0 +1,14 @@
+/* Ownership interactive timeline */
+
+/* -- OWNERSHIP TIMELINE -- */
+.own-tl{position:relative;padding-left:32px;}
+.own-tl::before{content:'';position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--line-strong);}
+.own-item{position:relative;padding-bottom:44px;cursor:pointer;}
+.own-item:last-child{padding-bottom:0;}
+.own-item::before{content:'';position:absolute;left:-32px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--surface-2);border:2px solid var(--line-strong);transition:all .3s;}
+.own-item.active::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 5px rgba(var(--accent-rgb),.18);}
+.own-head{display:flex;justify-content:space-between;align-items:center;}
+.own-head h4{font-size:18px;}
+.own-head span{font-family:var(--mono);font-size:12px;color:var(--text-faint);}
+.own-body{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);color:var(--text-dim);font-size:14px;}
+.own-item.active .own-body{max-height:120px;margin-top:10px;}

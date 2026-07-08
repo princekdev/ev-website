@@ -1,0 +1,13 @@
+/* Cost Savings Simulator */
+
+/* -- COST SIMULATOR -- */
+.cost-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;}
+@media (max-width:900px){.cost-wrap{grid-template-columns:1fr;}}
+.cost-results{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.cost-card{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--surface);}
+.cost-card.wide{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.cost-card .m-label{font-size:11px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.08em;}
+.cost-card .m-val{font-family:var(--disp);font-size:30px;margin-top:8px;color:var(--accent);}
+.tree-row{display:flex;gap:6px;flex-wrap:wrap;max-width:280px;}
+.tree-row span{font-size:20px;opacity:.25;transition:opacity .4s;}
+.tree-row span.lit{opacity:1;}

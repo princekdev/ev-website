@@ -1,0 +1,8 @@
+/* Testimonials feed */
+
+/* -- TESTIMONIALS -- */
+.feed{display:flex;flex-direction:column;gap:18px;max-width:680px;}
+.bubble{border:1px solid var(--line);border-radius:16px;padding:20px 22px;background:var(--surface);position:relative;max-width:88%;}
+.bubble.right{align-self:flex-end;background:rgba(var(--accent-rgb),.08);border-color:rgba(var(--accent-rgb),.3);}
+.bubble .who{font-family:var(--mono);font-size:11px;color:var(--accent);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;}
+.bubble p{font-size:14.5px;color:var(--text);}

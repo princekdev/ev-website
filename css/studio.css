@@ -1,0 +1,15 @@
+/* Vehicle Color Studio */
+
+/* -- COLOR STUDIO -- */
+.studio{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+@media (max-width:900px){.studio{grid-template-columns:1fr;}}
+.car-frame{position:relative;height:320px;border-radius:20px;border:1px solid var(--line);background:radial-gradient(circle at 50% 60%, rgba(var(--accent-rgb),.14), transparent 65%),var(--surface);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.car-svg .body{fill:var(--accent);transition:fill .5s var(--ease);}
+.car-svg .glow{fill:var(--accent);opacity:.25;filter:blur(18px);transition:fill .5s var(--ease);}
+.swatches{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;}
+.swatch{width:38px;height:38px;border-radius:50%;border:2px solid transparent;cursor:pointer;position:relative;transition:transform .2s;}
+.swatch:hover{transform:scale(1.12);}
+.swatch.active{border-color:#fff;}
+.studio-specs{display:flex;flex-direction:column;gap:14px;margin-top:24px;}
+.studio-specs .row{display:flex;justify-content:space-between;font-size:13px;border-bottom:1px dashed var(--line);padding-bottom:10px;color:var(--text-dim);}
+.studio-specs .row b{color:var(--accent);font-family:var(--mono);transition:color .4s;}

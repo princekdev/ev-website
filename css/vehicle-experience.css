@@ -1,0 +1,23 @@
+/* Vehicle Experience storytelling timeline */
+
+/* -- VEHICLE EXPERIENCE -- */
+.timeline{display:flex;flex-direction:column;}
+.tl-row{
+  display:grid;grid-template-columns:80px 1fr 1fr;gap:32px;
+  padding:44px 0;border-top:1px solid var(--line);
+  align-items:center;
+}
+.tl-row:first-child{border-top:1px solid var(--line);}
+.tl-index{font-family:var(--mono);color:var(--text-faint);font-size:14px;}
+.tl-title{font-family:var(--disp);font-size:26px;}
+.tl-title .tag{display:block;font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
+.tl-desc{color:var(--text-dim);font-size:15px;}
+.tl-viz{height:90px;position:relative;}
+/* mini diagrams */
+.viz-bar{height:6px;background:var(--surface-2);border-radius:4px;overflow:hidden;position:relative;}
+.viz-bar .fill{position:absolute;inset:0;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:4px;transition:width 1.4s var(--ease);}
+.viz-numbers{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--text-faint);margin-top:8px;}
+.viz-pulse{display:flex;align-items:flex-end;gap:4px;height:60px;}
+.viz-pulse i{flex:1;background:var(--surface-2);border-radius:2px;transform:scaleY(.1);transform-origin:bottom;transition:transform 1s var(--ease);}
+.tl-row.is-in .viz-pulse i{transform:scaleY(var(--h));}
+@media (max-width:900px){.tl-row{grid-template-columns:1fr;gap:14px;}.tl-index{display:none;}}
