@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARC — The Current Standard</title>
+<meta name="description" content="ARC. An electric vehicle built around one idea: energy should never be wasted.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/vehicle-experience.css">
+<link rel="stylesheet" href="css/calculator.css">
+<link rel="stylesheet" href="css/charging.css">
+<link rel="stylesheet" href="css/locator.css">
+<link rel="stylesheet" href="css/savings.css">
+<link rel="stylesheet" href="css/sustainability.css">
+<link rel="stylesheet" href="css/studio.css">
+<link rel="stylesheet" href="css/gauges.css">
+<link rel="stylesheet" href="css/ownership.css">
+<link rel="stylesheet" href="css/testimonials.css">
+<link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="nav" id="nav">
+  <div class="logo"><span class="bolt">⌁</span>ARC</div>
+  <div class="nav-links">
+    <a href="#experience">Vehicle</a>
+    <a href="#range">Range</a>
+    <a href="#charging">Charging</a>
+    <a href="#locator">Stations</a>
+    <a href="#savings">Savings</a>
+    <a href="#studio">Studio</a>
+  </div>
+  <div class="nav-cta">
+    <a class="btn magnetic" href="#studio">Configure</a>
+    <a class="btn btn-solid magnetic" href="#reserve">Reserve — $250</a>
+  </div>
+</nav>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero" id="hero">
+  <div class="hero-grid"></div>
+  <div class="container hero-inner">
+    <div class="hero-top">
+      <div class="eyebrow">ARC ONE / PRODUCTION 2027</div>
+      <div class="hero-hint">SCROLL TO EXPLORE ↓</div>
+    </div>
+    <h1>Every watt<br>has <em>somewhere</em><br>to be.</h1>
+    <p class="hero-sub">ARC One is built around a single obsession: eliminating wasted energy, from the motor windings to the shape of the mirror. 480&nbsp;km of real range, not a lab number.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid magnetic" href="#range">Run the range model</a>
+      <a class="btn magnetic" href="#experience">See how it works</a>
+    </div>
+    <div class="spec-field">
+      <div class="spec-chip chip-1"><div class="val">2.9<span class="unit">s</span></div><div class="lbl">0–100 km/h</div></div>
+      <div class="spec-chip chip-2"><div class="val">480<span class="unit">km</span></div><div class="lbl">EPA-equivalent range</div></div>
+      <div class="spec-chip chip-3"><div class="val">97<span class="unit">%</span></div><div class="lbl">Motor efficiency</div></div>
+      <div class="spec-chip chip-4"><div class="val">19<span class="unit">min</span></div><div class="lbl">10→80% charge</div></div>
+    </div>
+  </div>
+</section>
+
+<svg class="current-divider" viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 L200 20 L230 5 L260 35 L290 20 L1200 20"/></svg>
+
+<!-- ============================= VEHICLE EXPERIENCE ============================= -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Engineering</div>
+      <h2>Five decisions define the drive.</h2>
+      <p>Not a spec sheet. The reasoning behind the numbers — what ARC's engineers traded off, and why.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-row reveal">
+        <div class="tl-index">01</div>
+        <div>
+          <div class="tl-title"><span class="tag">Acceleration</span>0–100 in 2.9s, on purpose</div>
+          <p class="tl-desc">Twin motors split torque front and rear so launch traction never limits the number. The curve is tuned to feel linear, not violent.</p>
+        </div>
+        <div class="tl-viz">
+          <div class="viz-bar"><div class="fill" data-w="96"></div></div>
+          <div class="viz-numbers"><span>0 km/h</span><span>50</span><span>100</span><span>200</span></div>
+        </div>
+      </div>
+      <div class="tl-row reveal">
+        <div class="tl-index">02</div>
+        <div>
+          <div class="tl-title"><span class="tag">Battery</span>A pack shaped like the floor, not a box under it</div>
+          <p class="tl-desc">Structural cell-to-body construction removes 38 kg of housing and lowers the center of gravity by 22mm versus a bolted pack.</p>
+        </div>
+        <div class="tl-viz">
+          <div class="viz-pulse" id="battPulse"></div>
+        </div>
+      </div>
+      <div class="tl-row reveal">
+        <div class="tl-index">03</div>
+        <div>
+          <div class="tl-title"><span class="tag">Motor</span>One moving part, 97% of it useful</div>
+          <p class="tl-desc">A permanent-magnet synchronous motor with hairpin windings converts almost everything you feed it into motion, not heat.</p>
+        </div>
+        <div class="tl-viz">
+          <div class="viz-bar"><div class="fill" data-w="97"></div></div>
+          <div class="viz-numbers"><span>Input</span><span>Loss 3%</span><span>Output 97%</span></div>
+        </div>
+      </div>
+      <div class="tl-row reveal">
+        <div class="tl-index">04</div>
+        <div>
+          <div class="tl-title"><span class="tag">Efficiency</span>13.2 kWh per 100km, in real traffic</div>
+          <p class="tl-desc">Active grille shutters and a 0.21 Cd body cut highway drag, the largest single lever on real-world range.</p>
+        </div>
+        <div class="tl-viz">
+          <div class="viz-bar"><div class="fill" data-w="82"></div></div>
+          <div class="viz-numbers"><span>City</span><span>Mixed</span><span>Highway</span></div>
+        </div>
+      </div>
+      <div class="tl-row reveal">
+        <div class="tl-index">05</div>
+        <div>
+          <div class="tl-title"><span class="tag">Safety</span>Structure absorbs first, electronics react second</div>
+          <p class="tl-desc">The battery pack doubles as a load-bearing skeleton; 8 radar and 11 camera inputs run redundant paths at 30 updates a second.</p>
+        </div>
+        <div class="tl-viz">
+          <div class="viz-pulse" id="safePulse"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= RANGE INTELLIGENCE ============================= -->
+<section id="range">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Range Intelligence</div>
+      <h2>Model your own drive.</h2>
+      <p>Every input below feeds a real efficiency model — the same variables that move range in the real world.</p>
+    </div>
+    <div class="calc-wrap reveal">
+      <div class="calc-controls">
+        <div class="ctl">
+          <div class="ctl-label"><span>Speed</span><b id="lblSpeed">90 km/h</b></div>
+          <input type="range" id="ctlSpeed" min="20" max="180" value="90">
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Outside temperature</span><b id="lblTemp">18°C</b></div>
+          <input type="range" id="ctlTemp" min="-20" max="42" value="18">
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Driving mode</span></div>
+          <div class="seg" id="segMode">
+            <button data-val="0.88" class="active">Eco</button>
+            <button data-val="1">Normal</button>
+            <button data-val="1.22">Sport</button>
+          </div>
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Terrain</span></div>
+          <div class="seg" id="segTerrain">
+            <button data-val="1" class="active">Flat</button>
+            <button data-val="1.14">Hilly</button>
+            <button data-val="1.3">Mountain</button>
+          </div>
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Traffic</span></div>
+          <div class="seg" id="segTraffic">
+            <button data-val="1" class="active">Free-flow</button>
+            <button data-val="1.1">Moderate</button>
+            <button data-val="1.24">Heavy stop-go</button>
+          </div>
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Driving style</span></div>
+          <div class="seg" id="segStyle">
+            <button data-val="0.94" class="active">Gentle</button>
+            <button data-val="1">Average</button>
+            <button data-val="1.16">Aggressive</button>
+          </div>
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Passengers</span><b id="lblPax">1</b></div>
+          <input type="range" id="ctlPax" min="1" max="5" value="1" step="1">
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Cargo weight</span><b id="lblCargo">0 kg</b></div>
+          <input type="range" id="ctlCargo" min="0" max="200" value="0" step="10">
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Wheel size</span></div>
+          <div class="seg" id="segWheel">
+            <button data-val="1" class="active">19"</button>
+            <button data-val="1.06">20"</button>
+            <button data-val="1.11">21"</button>
+          </div>
+        </div>
+        <div class="ctl toggle-row">
+          <span>Air conditioning</span>
+          <div class="toggle" id="tgAC"></div>
+        </div>
+        <div class="ctl toggle-row" style="margin-top:14px;">
+          <span>Cabin heater</span>
+          <div class="toggle" id="tgHeat"></div>
+        </div>
+        <div class="ctl toggle-row" style="margin-top:14px;margin-bottom:0;">
+          <span>Regenerative braking</span>
+          <div class="toggle on" id="tgRegen"></div>
+        </div>
+      </div>
+      <div class="calc-output">
+        <div>
+          <div class="eyebrow">Estimated range</div>
+          <div class="range-big"><span id="outRange">412</span><span>km</span></div>
+          <svg class="energy-graph" viewBox="0 0 400 110" preserveAspectRatio="none">
+            <defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#49e6c4" stop-opacity=".5"/><stop offset="1" stop-color="#49e6c4" stop-opacity="0"/></linearGradient></defs>
+            <path class="area" id="graphArea" d=""></path>
+            <path id="graphLine" d=""></path>
+          </svg>
+        </div>
+        <div class="metric-grid">
+          <div class="metric"><div class="m-label">Consumption</div><div class="m-val" id="outConsume">14.9 kWh/100km</div></div>
+          <div class="metric"><div class="m-label">Efficiency</div><div class="m-val" id="outEff">89%</div></div>
+          <div class="metric" style="grid-column:1/-1;">
+            <div class="m-label">Remaining battery (from 100%)</div>
+            <div class="m-val" id="outBatt">100%</div>
+            <div class="battery-bar"><div class="fill" id="battFill" style="width:100%"></div></div>
+          </div>
+        </div>
+        <div class="reco" id="reco">Optimal setup — this is close to peak efficiency.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="current-divider" viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 L300 20 L330 8 L360 32 L390 20 L1200 20"/></svg>
+
+<!-- ============================= CHARGING ECOSYSTEM ============================= -->
+<section id="charging">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Charging Ecosystem</div>
+      <h2>Home overnight. Fast on the road.</h2>
+      <p>Two very different curves, both mapped in real time below.</p>
+    </div>
+    <div class="charge-grid reveal">
+      <div class="dash-card">
+        <h3 style="font-size:18px;margin-bottom:20px;">Home charging · 11kW AC</h3>
+        <div class="ring-wrap">
+          <div class="ring">
+            <svg viewBox="0 0 140 140"><circle class="track" cx="70" cy="70" r="60"/><circle class="prog" id="ringHome" cx="70" cy="70" r="60" stroke-dasharray="377" stroke-dashoffset="377"/></svg>
+            <div class="ring-label"><div class="pct" id="ringHomePct">0%</div><div class="sub">battery</div></div>
+          </div>
+          <div class="dash-stats">
+            <div class="row"><span>Time to full (20→100%)</span><b>7h 20m</b></div>
+            <div class="row"><span>Added per hour</span><b>~62 km</b></div>
+            <div class="row"><span>Cost per full charge</span><b>$8.40</b></div>
+            <div class="row"><span>Overnight window used</span><b id="homeWindow">0h 00m</b></div>
+          </div>
+        </div>
+        <div class="charge-timeline" id="homeTimeline"></div>
+      </div>
+      <div class="dash-card">
+        <h3 style="font-size:18px;margin-bottom:20px;">Fast charging · 250kW DC</h3>
+        <div class="ring-wrap">
+          <div class="ring">
+            <svg viewBox="0 0 140 140"><circle class="track" cx="70" cy="70" r="60"/><circle class="prog" id="ringFast" cx="70" cy="70" r="60" stroke-dasharray="377" stroke-dashoffset="377" style="stroke:var(--accent-2)"/></svg>
+            <div class="ring-label"><div class="pct" id="ringFastPct">0%</div><div class="sub">battery</div></div>
+          </div>
+          <div class="dash-stats">
+            <div class="row"><span>Time 10→80%</span><b>19 min</b></div>
+            <div class="row"><span>Peak power</span><b>250 kW</b></div>
+            <div class="row"><span>Cost per session</span><b>$14.10</b></div>
+            <div class="row"><span>Charging now</span><b id="fastWindow">0m 00s</b></div>
+          </div>
+        </div>
+        <svg class="curve-svg" viewBox="0 0 400 150" preserveAspectRatio="none">
+          <path class="curve" d="M0 130 C 60 20, 140 20, 200 55 C 280 100, 340 120, 400 128"/>
+        </svg>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:16px;">
+      <button class="btn magnetic" id="btnStartCharge">Simulate a charge session ⚡</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= LOCATOR ============================= -->
+<section id="locator">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Station Network</div>
+      <h2>4,200 fast chargers, mapped.</h2>
+      <p>A live view of the network near you — search, filter, and pin your regulars.</p>
+    </div>
+    <div class="locator-wrap reveal">
+      <div class="loc-list">
+        <div class="loc-search">
+          <input type="text" id="stationSearch" placeholder="Search by name or area...">
+          <div class="loc-filters">
+            <button class="active" data-f="all">All</button>
+            <button data-f="available">Available</button>
+            <button data-f="open">Open now</button>
+            <button data-f="fav">Favorites</button>
+          </div>
+        </div>
+        <div id="stationList"></div>
+      </div>
+      <div class="map-pane" id="mapPane">
+        <svg id="mapSvg" viewBox="0 0 600 560"></svg>
+        <div class="map-tooltip" id="mapTooltip"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="current-divider" viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 L400 20 L430 6 L460 34 L490 20 L1200 20"/></svg>
+
+<!-- ============================= COST SAVINGS ============================= -->
+<section id="savings">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Cost Savings Simulator</div>
+      <h2>What you'd stop spending.</h2>
+      <p>Compare ARC against a comparable petrol car over the years you'd actually own it.</p>
+    </div>
+    <div class="cost-wrap reveal">
+      <div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Daily distance</span><b id="lblDist">45 km</b></div>
+          <input type="range" id="ctlDist" min="5" max="200" value="45">
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Fuel price</span><b id="lblFuel">$1.55/L</b></div>
+          <input type="range" id="ctlFuel" min="0.8" max="3" step="0.05" value="1.55">
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Electricity cost</span><b id="lblElec">$0.14/kWh</b></div>
+          <input type="range" id="ctlElec" min="0.04" max="0.45" step="0.01" value="0.14">
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Ownership period</span><b id="lblYears">5 years</b></div>
+          <input type="range" id="ctlYears" min="1" max="12" value="5">
+        </div>
+        <div class="ctl">
+          <div class="ctl-label"><span>Driving frequency</span></div>
+          <div class="seg" id="segFreq">
+            <button data-val="0.7">Weekends</button>
+            <button data-val="1" class="active">Daily</button>
+            <button data-val="1.4">Heavy commuter</button>
+          </div>
+        </div>
+      </div>
+      <div class="cost-results">
+        <div class="cost-card"><div class="m-label">Monthly savings</div><div class="m-val" id="outMonthly">$0</div></div>
+        <div class="cost-card"><div class="m-label">Yearly savings</div><div class="m-val" id="outYearly">$0</div></div>
+        <div class="cost-card wide">
+          <div><div class="m-label">Total over period</div><div class="m-val" id="outTotal">$0</div></div>
+          <div><div class="m-label">CO₂ avoided</div><div class="m-val" style="color:var(--accent-2);" id="outCO2">0 kg</div></div>
+        </div>
+        <div class="cost-card wide">
+          <div style="flex:1;"><div class="m-label">Roughly equivalent to planting</div><div class="m-val" id="outTrees">0 trees / yr</div></div>
+          <div class="tree-row" id="treeRow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SUSTAINABILITY ============================= -->
+<section id="sustainability">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Circularity</div>
+      <h2>The pack has a second life before it has a next one.</h2>
+      <p>Four systems, working the same way a forest cycles carbon.</p>
+    </div>
+    <div class="sus-grid">
+      <div class="sus-card reveal">
+        <svg viewBox="0 0 120 120"><path class="sus-loop" d="M60 15 A45 45 0 1 1 15 60" marker-end="url(#arrow)"/><circle cx="60" cy="60" r="4" fill="var(--accent)"/></svg>
+        <h4>Battery recycling</h4>
+        <p>92% of critical minerals recovered and routed back into new cell production, not landfill.</p>
+      </div>
+      <div class="sus-card reveal">
+        <svg viewBox="0 0 120 60"><g id="solarPanel"></g></svg>
+        <h4>Solar charging</h4>
+        <p>Rooftop arrays at ARC stations offset an average 34% of the grid draw for daytime fast-charging.</p>
+      </div>
+      <div class="sus-card reveal">
+        <svg viewBox="0 0 120 100" id="carbonSvg"></svg>
+        <h4>Carbon reduction</h4>
+        <p>Lifetime emissions run roughly 62% below a comparable petrol vehicle, manufacturing included.</p>
+      </div>
+      <div class="sus-card reveal">
+        <svg viewBox="0 0 120 120" id="circularSvg"></svg>
+        <h4>Renewable supply chain</h4>
+        <p>Cell suppliers are contracted against renewable-only power purchase agreements by 2028.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= COLOR STUDIO ============================= -->
+<section id="studio">
+  <div class="container">
+    <div class="studio">
+      <div class="reveal">
+        <div class="car-frame">
+          <svg class="car-svg" viewBox="0 0 300 120" width="80%">
+            <ellipse class="glow" cx="150" cy="70" rx="120" ry="30"/>
+            <path class="body" d="M20 80 Q30 40 70 38 L110 20 Q150 12 190 20 L235 40 Q280 42 285 78 Q285 90 270 90 L260 90 A20 20 0 0 1 220 90 L110 90 A20 20 0 0 1 70 90 L30 90 Q20 90 20 80 Z"/>
+            <circle cx="90" cy="90" r="16" fill="#0a0e14" stroke="#333" stroke-width="4"/>
+            <circle cx="240" cy="90" r="16" fill="#0a0e14" stroke="#333" stroke-width="4"/>
+          </svg>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">Color Studio</div>
+        <h2 style="margin-top:14px;">One choice, every surface reacts.</h2>
+        <p style="color:var(--text-dim);margin-top:14px;">Pick a finish — the paint, the ambient glow, the interface accent, and the spec sheet all shift together.</p>
+        <div class="swatches" id="swatches">
+          <div class="swatch active" style="background:#49e6c4" data-accent="#49e6c4" data-accent2="#e8935c" data-name="Photon Teal"></div>
+          <div class="swatch" style="background:#e8935c" data-accent="#e8935c" data-accent2="#49e6c4" data-name="Copper Charge"></div>
+          <div class="swatch" style="background:#8a7bf0" data-accent="#8a7bf0" data-accent2="#49e6c4" data-name="Violet Current"></div>
+          <div class="swatch" style="background:#f0537b" data-accent="#f0537b" data-accent2="#49e6c4" data-name="Signal Rose"></div>
+          <div class="swatch" style="background:#e3e6ea" data-accent="#e3e6ea" data-accent2="#49e6c4" data-name="Arctic White"></div>
+        </div>
+        <div class="studio-specs">
+          <div class="row"><span>Finish</span><b id="studioFinish">Photon Teal</b></div>
+          <div class="row"><span>Wheels</span><b>21" Aero Turbine</b></div>
+          <div class="row"><span>Interior</span><b>Recycled charcoal weave</b></div>
+          <div class="row"><span>Estimated total</span><b>$58,400</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= GAUGES ============================= -->
+<section id="performance">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Performance Telemetry</div>
+      <h2>Instrument-cluster honesty.</h2>
+      <p>The same six readouts shown to ARC drivers, live.</p>
+    </div>
+    <div class="gauge-grid reveal" id="gaugeGrid"></div>
+  </div>
+</section>
+
+<!-- ============================= OWNERSHIP ============================= -->
+<section id="ownership">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Ownership</div>
+      <h2>What happens after you buy it.</h2>
+      <p>Tap a stage to expand it.</p>
+    </div>
+    <div class="own-tl reveal" id="ownTl">
+      <div class="own-item active" data-i="0">
+        <div class="own-head"><h4>8-year battery &amp; drivetrain warranty</h4><span>Year 0–8</span></div>
+        <div class="own-body">Covers capacity fade below 70% and any drivetrain fault, transferable to a second owner at no cost.</div>
+      </div>
+      <div class="own-item" data-i="1">
+        <div class="own-head"><h4>Mobile service, most repairs at your curb</h4><span>Ongoing</span></div>
+        <div class="own-body">A technician comes to you for 90% of service items; only structural work needs a shop visit.</div>
+      </div>
+      <div class="own-item" data-i="2">
+        <div class="own-head"><h4>Over-the-air software updates</h4><span>Monthly</span></div>
+        <div class="own-body">Range, performance, and safety updates ship over-the-air — no visit required, ever.</div>
+      </div>
+      <div class="own-item" data-i="3">
+        <div class="own-head"><h4>24/7 roadside assistance</h4><span>Included, 5 yrs</span></div>
+        <div class="own-body">Flatbed towing, mobile charging in an emergency, and a loaner if you're stranded overnight.</div>
+      </div>
+      <div class="own-item" data-i="4">
+        <div class="own-head"><h4>Optional Autopark subscription</h4><span>$14/mo</span></div>
+        <div class="own-body">Cancel anytime. Adds automated parking and valet summon in supported garages.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TESTIMONIALS ============================= -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">From owners</div>
+      <h2>Unfiltered, from the delivery group chat.</h2>
+    </div>
+    <div class="feed reveal">
+      <div class="bubble"><div class="who">Reservation #0412 · Austin</div><p>Ran the range model before ordering — my actual commute came in within 4% of what it predicted.</p></div>
+      <div class="bubble right"><div class="who">Reservation #1187 · Lyon</div><p>The home charging math checked out too. Cheaper than my espresso habit, monthly.</p></div>
+      <div class="bubble"><div class="who">Reservation #0093 · Nairobi</div><p>First car I've owned where a software update actually added range instead of a new bug.</p></div>
+      <div class="bubble right"><div class="who">Reservation #2044 · Osaka</div><p>Fast charger at the coastal loop route got me from 12% to 80% before I finished a coffee.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer id="reserve">
+  <div class="container">
+    <svg class="current-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" style="margin-bottom:40px;"><path d="M0 20 L500 20 L530 6 L560 34 L590 20 L1200 20"/></svg>
+    <div class="foot-top">
+      <div>
+        <div class="logo"><span class="bolt">⌁</span>ARC</div>
+        <p style="color:var(--text-dim);max-width:280px;margin-top:16px;font-size:14px;">Reserve ARC One for a fully refundable $250 deposit. Deliveries begin Q2 2027.</p>
+        <div class="foot-form"><input type="email" placeholder="you@email.com" aria-label="Email address"><button class="btn btn-solid magnetic">Reserve</button></div>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col"><h5>Vehicle</h5>
+          <a href="#experience">Engineering</a><a href="#range">Range model</a><a href="#studio">Color studio</a><a href="#performance">Performance</a>
+        </div>
+        <div class="foot-col"><h5>Ownership</h5>
+          <a href="#charging">Charging</a><a href="#locator">Station map</a><a href="#savings">Cost savings</a><a href="#ownership">Warranty</a>
+        </div>
+        <div class="foot-col"><h5>Company</h5>
+          <a href="#">Careers</a><a href="#">Press</a><a href="#">Sustainability report</a><a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2027 ARC Motors. All wattage accounted for.</span>
+      <a href="#hero" class="back-top" aria-label="Back to top">↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script src="js/range-calculator.js" defer></script>
+<script src="js/charging-dashboard.js" defer></script>
+<script src="js/station-locator.js" defer></script>
+<script src="js/cost-simulator.js" defer></script>
+<script src="js/sustainability.js" defer></script>
+<script src="js/gauges.js" defer></script>
+<script src="js/ownership.js" defer></script>
+<script src="js/color-studio.js" defer></script>
+</body>
+</html>
